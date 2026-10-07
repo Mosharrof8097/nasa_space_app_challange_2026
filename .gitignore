@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------
+# Large / non-distributable data
+# ---------------------------------------------------------------
+
+# Multi-year NASA FIRMS archive (~24 GB). Download from
+# https://firms.modaps.eosdis.nasa.gov/ rather than tracking it here.
+full data zip/
+
+# Published papers — copyrighted, and ~216 MB. The annotated bibliography
+# in LITERATURE_REVIEW_AND_REFERENCES.md lists every source with its DOI.
+related paper*/
+
+# ---------------------------------------------------------------
+# Working files
+# ---------------------------------------------------------------
+*.py.bak
+*.bak
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

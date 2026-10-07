@@ -1,0 +1,86 @@
+{
+  "analysis_timestamp": "2026-10-07T19:08:17.595747",
+  "input_file": "/home/mosharrof/nasa app challenge 2026/data download/raw_data/unified_global_fire_7d.csv",
+  "total_raw_records": 83226,
+  "valid_sanitized_records": 83225,
+  "parameters": {
+    "clustering_mode": "GA-evolved per-biome radii",
+    "default_radius_km": 1.0,
+    "per_biome_radius_km": {
+      "Montane & Hills": 1.2,
+      "Dense Rainforest": 0.8,
+      "Agricultural Plains": 1.5,
+      "Savannas & Grasslands": 1.5
+    },
+    "temporal_window_hours": 12.0,
+    "temporal_grouping": "same acquisition date AND same day/night overpass",
+    "grid": "cos(latitude)-corrected equal-ground-distance cells",
+    "boundary_handling": "Haversine union of adjacent cells within radius",
+    "energy_accounting": "per-sensor FRP kept separate; representative_frp_mw avoids double counting"
+  },
+  "exact_duplicates": {
+    "count": 0,
+    "percentage": 0.0
+  },
+  "spatio_temporal_clusters": {
+    "total_unique_physical_fires": 34869,
+    "total_multi_pixel_sub_detections": 48356,
+    "overall_clustering_reduction_percentage": 58.1
+  },
+  "class_breakdown": {
+    "Montane & Hills": {
+      "class_id": 1,
+      "clustering_radius_km": 1.2,
+      "raw_records": 2861,
+      "consolidated_fire_events": 760,
+      "multi_pixel_redundancy_count": 2101,
+      "compression_ratio": "73.4%",
+      "cross_sensor_agreements": 118,
+      "mean_pixels_per_event": 3.76,
+      "max_pixels_per_event": 138
+    },
+    "Dense Rainforest": {
+      "class_id": 2,
+      "clustering_radius_km": 0.8,
+      "raw_records": 75958,
+      "consolidated_fire_events": 31355,
+      "multi_pixel_redundancy_count": 44603,
+      "compression_ratio": "58.7%",
+      "cross_sensor_agreements": 3659,
+      "mean_pixels_per_event": 2.42,
+      "max_pixels_per_event": 65
+    },
+    "Agricultural Plains": {
+      "class_id": 3,
+      "clustering_radius_km": 1.5,
+      "raw_records": 701,
+      "consolidated_fire_events": 366,
+      "multi_pixel_redundancy_count": 335,
+      "compression_ratio": "47.8%",
+      "cross_sensor_agreements": 17,
+      "mean_pixels_per_event": 1.92,
+      "max_pixels_per_event": 26
+    },
+    "Savannas & Grasslands": {
+      "class_id": 4,
+      "clustering_radius_km": 1.5,
+      "raw_records": 3705,
+      "consolidated_fire_events": 2388,
+      "multi_pixel_redundancy_count": 1317,
+      "compression_ratio": "35.5%",
+      "cross_sensor_agreements": 97,
+      "mean_pixels_per_event": 1.55,
+      "max_pixels_per_event": 9
+    }
+  },
+  "sensor_breakdown": {
+    "raw_counts": {
+      "VIIRS": 67416,
+      "MODIS": 15809
+    },
+    "viirs_to_modis_raw_ratio": 4.26,
+    "clustered_cross_sensor_matches": 3891,
+    "mean_viirs_pixels_per_cross_sensor_fire": 4.73,
+    "mean_modis_pixels_per_cross_sensor_fire": 1.55
+  }
+}

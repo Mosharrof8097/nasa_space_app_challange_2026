@@ -1,0 +1,713 @@
+{
+  "generated_at": "2026-09-26T20:21:29.479185",
+  "time_range": {
+    "start": "2000-01-01",
+    "end": "2026-09-26"
+  },
+  "classes": {
+    "montane_hills": {
+      "class_id": 1,
+      "name": "Montane & Hills",
+      "region": "Western USA / Sierras",
+      "calibration_factor": 5.08,
+      "timeline_stats": {
+        "total_days": 9766,
+        "modis_total_hotspots": 454531,
+        "viirs_total_hotspots": 1431537,
+        "critical_anomaly_days": 350
+      },
+      "yearly_summaries": [
+        {
+          "year": 2000,
+          "modis_count": 13910,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.5
+        },
+        {
+          "year": 2001,
+          "modis_count": 14123,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 24.2
+        },
+        {
+          "year": 2002,
+          "modis_count": 14275,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 24.4
+        },
+        {
+          "year": 2003,
+          "modis_count": 13477,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2004,
+          "modis_count": 13449,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2005,
+          "modis_count": 14002,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2006,
+          "modis_count": 13438,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2007,
+          "modis_count": 13980,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2008,
+          "modis_count": 20830,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 31.9
+        },
+        {
+          "year": 2009,
+          "modis_count": 13718,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2010,
+          "modis_count": 14094,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2011,
+          "modis_count": 13312,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 22.9
+        },
+        {
+          "year": 2012,
+          "modis_count": 13818,
+          "viirs_count": 69547.0,
+          "harmonized_fire_index": 23.7
+        },
+        {
+          "year": 2013,
+          "modis_count": 13999,
+          "viirs_count": 71122.0,
+          "harmonized_fire_index": 24.2
+        },
+        {
+          "year": 2014,
+          "modis_count": 13406,
+          "viirs_count": 68131.0,
+          "harmonized_fire_index": 23.1
+        },
+        {
+          "year": 2015,
+          "modis_count": 13834,
+          "viirs_count": 70243.0,
+          "harmonized_fire_index": 23.7
+        },
+        {
+          "year": 2016,
+          "modis_count": 13851,
+          "viirs_count": 70412.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2017,
+          "modis_count": 25122,
+          "viirs_count": 127610.0,
+          "harmonized_fire_index": 35.6
+        },
+        {
+          "year": 2018,
+          "modis_count": 32984,
+          "viirs_count": 167529.0,
+          "harmonized_fire_index": 41.4
+        },
+        {
+          "year": 2019,
+          "modis_count": 13745,
+          "viirs_count": 69786.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2020,
+          "modis_count": 43890,
+          "viirs_count": 222974.0,
+          "harmonized_fire_index": 46.1
+        },
+        {
+          "year": 2021,
+          "modis_count": 30960,
+          "viirs_count": 157243.0,
+          "harmonized_fire_index": 40.2
+        },
+        {
+          "year": 2022,
+          "modis_count": 14080,
+          "viirs_count": 71536.0,
+          "harmonized_fire_index": 24.0
+        },
+        {
+          "year": 2023,
+          "modis_count": 13515,
+          "viirs_count": 68662.0,
+          "harmonized_fire_index": 23.4
+        },
+        {
+          "year": 2024,
+          "modis_count": 14088,
+          "viirs_count": 71598.0,
+          "harmonized_fire_index": 24.0
+        },
+        {
+          "year": 2025,
+          "modis_count": 13707,
+          "viirs_count": 69656.0,
+          "harmonized_fire_index": 23.5
+        },
+        {
+          "year": 2026,
+          "modis_count": 10924,
+          "viirs_count": 55488.0,
+          "harmonized_fire_index": 25.0
+        }
+      ]
+    },
+    "dense_rainforest": {
+      "class_id": 2,
+      "name": "Dense Rainforest",
+      "region": "Amazon Basin, Brazil",
+      "calibration_factor": 4.68,
+      "timeline_stats": {
+        "total_days": 9766,
+        "modis_total_hotspots": 3679617,
+        "viirs_total_hotspots": 9569795,
+        "critical_anomaly_days": 218
+      },
+      "yearly_summaries": [
+        {
+          "year": 2000,
+          "modis_count": 103457,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 22.8
+        },
+        {
+          "year": 2001,
+          "modis_count": 106844,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2002,
+          "modis_count": 107210,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.5
+        },
+        {
+          "year": 2003,
+          "modis_count": 105512,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.4
+        },
+        {
+          "year": 2004,
+          "modis_count": 103268,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 22.9
+        },
+        {
+          "year": 2005,
+          "modis_count": 201192,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 36.9
+        },
+        {
+          "year": 2006,
+          "modis_count": 113217,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 24.4
+        },
+        {
+          "year": 2007,
+          "modis_count": 230793,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 38.4
+        },
+        {
+          "year": 2008,
+          "modis_count": 107226,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2009,
+          "modis_count": 104560,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2010,
+          "modis_count": 241779,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 39.9
+        },
+        {
+          "year": 2011,
+          "modis_count": 108738,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.9
+        },
+        {
+          "year": 2012,
+          "modis_count": 109385,
+          "viirs_count": 507261.0,
+          "harmonized_fire_index": 23.7
+        },
+        {
+          "year": 2013,
+          "modis_count": 108467,
+          "viirs_count": 507639.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2014,
+          "modis_count": 104548,
+          "viirs_count": 489211.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2015,
+          "modis_count": 178897,
+          "viirs_count": 837222.0,
+          "harmonized_fire_index": 34.6
+        },
+        {
+          "year": 2016,
+          "modis_count": 106586,
+          "viirs_count": 498774.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2017,
+          "modis_count": 106434,
+          "viirs_count": 498070.0,
+          "harmonized_fire_index": 23.4
+        },
+        {
+          "year": 2018,
+          "modis_count": 106113,
+          "viirs_count": 496635.0,
+          "harmonized_fire_index": 23.5
+        },
+        {
+          "year": 2019,
+          "modis_count": 215989,
+          "viirs_count": 1010882.0,
+          "harmonized_fire_index": 38.1
+        },
+        {
+          "year": 2020,
+          "modis_count": 254620,
+          "viirs_count": 1191640.0,
+          "harmonized_fire_index": 40.6
+        },
+        {
+          "year": 2021,
+          "modis_count": 106228,
+          "viirs_count": 497125.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2022,
+          "modis_count": 103877,
+          "viirs_count": 486153.0,
+          "harmonized_fire_index": 23.1
+        },
+        {
+          "year": 2023,
+          "modis_count": 103870,
+          "viirs_count": 486159.0,
+          "harmonized_fire_index": 23.0
+        },
+        {
+          "year": 2024,
+          "modis_count": 265159,
+          "viirs_count": 1240941.0,
+          "harmonized_fire_index": 41.1
+        },
+        {
+          "year": 2025,
+          "modis_count": 106946,
+          "viirs_count": 500552.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2026,
+          "modis_count": 68702,
+          "viirs_count": 321531.0,
+          "harmonized_fire_index": 20.6
+        }
+      ]
+    },
+    "agricultural_plains": {
+      "class_id": 3,
+      "name": "Agricultural Plains",
+      "region": "South Asia & Bangladesh",
+      "calibration_factor": 8.47,
+      "timeline_stats": {
+        "total_days": 9766,
+        "modis_total_hotspots": 140725,
+        "viirs_total_hotspots": 685815,
+        "critical_anomaly_days": 150
+      },
+      "yearly_summaries": [
+        {
+          "year": 2000,
+          "modis_count": 4962,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.6
+        },
+        {
+          "year": 2001,
+          "modis_count": 5075,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 26.4
+        },
+        {
+          "year": 2002,
+          "modis_count": 4929,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.6
+        },
+        {
+          "year": 2003,
+          "modis_count": 4956,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.8
+        },
+        {
+          "year": 2004,
+          "modis_count": 4971,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.6
+        },
+        {
+          "year": 2005,
+          "modis_count": 4997,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.7
+        },
+        {
+          "year": 2006,
+          "modis_count": 4827,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.1
+        },
+        {
+          "year": 2007,
+          "modis_count": 4834,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.1
+        },
+        {
+          "year": 2008,
+          "modis_count": 5169,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 26.4
+        },
+        {
+          "year": 2009,
+          "modis_count": 5044,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 26.2
+        },
+        {
+          "year": 2010,
+          "modis_count": 4886,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 25.4
+        },
+        {
+          "year": 2011,
+          "modis_count": 5036,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 26.1
+        },
+        {
+          "year": 2012,
+          "modis_count": 6440,
+          "viirs_count": 53916.0,
+          "harmonized_fire_index": 32.6
+        },
+        {
+          "year": 2013,
+          "modis_count": 5031,
+          "viirs_count": 42614.0,
+          "harmonized_fire_index": 26.1
+        },
+        {
+          "year": 2014,
+          "modis_count": 4838,
+          "viirs_count": 40969.0,
+          "harmonized_fire_index": 25.2
+        },
+        {
+          "year": 2015,
+          "modis_count": 5001,
+          "viirs_count": 42410.0,
+          "harmonized_fire_index": 25.9
+        },
+        {
+          "year": 2016,
+          "modis_count": 7290,
+          "viirs_count": 61726.0,
+          "harmonized_fire_index": 35.4
+        },
+        {
+          "year": 2017,
+          "modis_count": 4867,
+          "viirs_count": 41229.0,
+          "harmonized_fire_index": 25.4
+        },
+        {
+          "year": 2018,
+          "modis_count": 4897,
+          "viirs_count": 41425.0,
+          "harmonized_fire_index": 25.4
+        },
+        {
+          "year": 2019,
+          "modis_count": 5030,
+          "viirs_count": 42585.0,
+          "harmonized_fire_index": 26.2
+        },
+        {
+          "year": 2020,
+          "modis_count": 4931,
+          "viirs_count": 41735.0,
+          "harmonized_fire_index": 25.5
+        },
+        {
+          "year": 2021,
+          "modis_count": 7081,
+          "viirs_count": 60076.0,
+          "harmonized_fire_index": 35.3
+        },
+        {
+          "year": 2022,
+          "modis_count": 4988,
+          "viirs_count": 42240.0,
+          "harmonized_fire_index": 25.8
+        },
+        {
+          "year": 2023,
+          "modis_count": 5080,
+          "viirs_count": 43131.0,
+          "harmonized_fire_index": 26.5
+        },
+        {
+          "year": 2024,
+          "modis_count": 7934,
+          "viirs_count": 67205.0,
+          "harmonized_fire_index": 37.4
+        },
+        {
+          "year": 2025,
+          "modis_count": 4860,
+          "viirs_count": 41159.0,
+          "harmonized_fire_index": 25.3
+        },
+        {
+          "year": 2026,
+          "modis_count": 2771,
+          "viirs_count": 23395.0,
+          "harmonized_fire_index": 19.5
+        }
+      ]
+    },
+    "savannas_grasslands": {
+      "class_id": 4,
+      "name": "Savannas & Grasslands",
+      "region": "Southern & Central Africa",
+      "calibration_factor": 1.15,
+      "timeline_stats": {
+        "total_days": 9766,
+        "modis_total_hotspots": 5783677,
+        "viirs_total_hotspots": 3765357,
+        "critical_anomaly_days": 188
+      },
+      "yearly_summaries": [
+        {
+          "year": 2000,
+          "modis_count": 195604,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2001,
+          "modis_count": 193398,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.0
+        },
+        {
+          "year": 2002,
+          "modis_count": 203206,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 24.0
+        },
+        {
+          "year": 2003,
+          "modis_count": 193647,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.1
+        },
+        {
+          "year": 2004,
+          "modis_count": 274567,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 30.6
+        },
+        {
+          "year": 2005,
+          "modis_count": 200106,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2006,
+          "modis_count": 204679,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 24.2
+        },
+        {
+          "year": 2007,
+          "modis_count": 192866,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.0
+        },
+        {
+          "year": 2008,
+          "modis_count": 200502,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.7
+        },
+        {
+          "year": 2009,
+          "modis_count": 260530,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 29.5
+        },
+        {
+          "year": 2010,
+          "modis_count": 195466,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2011,
+          "modis_count": 192919,
+          "viirs_count": 0.0,
+          "harmonized_fire_index": 23.0
+        },
+        {
+          "year": 2012,
+          "modis_count": 198151,
+          "viirs_count": 225578.0,
+          "harmonized_fire_index": 23.5
+        },
+        {
+          "year": 2013,
+          "modis_count": 197781,
+          "viirs_count": 227457.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2014,
+          "modis_count": 276082,
+          "viirs_count": 317499.0,
+          "harmonized_fire_index": 30.3
+        },
+        {
+          "year": 2015,
+          "modis_count": 199220,
+          "viirs_count": 229102.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2016,
+          "modis_count": 198875,
+          "viirs_count": 228721.0,
+          "harmonized_fire_index": 23.4
+        },
+        {
+          "year": 2017,
+          "modis_count": 197130,
+          "viirs_count": 226692.0,
+          "harmonized_fire_index": 23.3
+        },
+        {
+          "year": 2018,
+          "modis_count": 199098,
+          "viirs_count": 228966.0,
+          "harmonized_fire_index": 23.6
+        },
+        {
+          "year": 2019,
+          "modis_count": 308353,
+          "viirs_count": 354617.0,
+          "harmonized_fire_index": 32.1
+        },
+        {
+          "year": 2020,
+          "modis_count": 190652,
+          "viirs_count": 219263.0,
+          "harmonized_fire_index": 22.5
+        },
+        {
+          "year": 2021,
+          "modis_count": 205762,
+          "viirs_count": 236616.0,
+          "harmonized_fire_index": 24.0
+        },
+        {
+          "year": 2022,
+          "modis_count": 202022,
+          "viirs_count": 232325.0,
+          "harmonized_fire_index": 23.8
+        },
+        {
+          "year": 2023,
+          "modis_count": 321173,
+          "viirs_count": 369352.0,
+          "harmonized_fire_index": 33.4
+        },
+        {
+          "year": 2024,
+          "modis_count": 204083,
+          "viirs_count": 234710.0,
+          "harmonized_fire_index": 24.1
+        },
+        {
+          "year": 2025,
+          "modis_count": 193616,
+          "viirs_count": 222648.0,
+          "harmonized_fire_index": 23.2
+        },
+        {
+          "year": 2026,
+          "modis_count": 184189,
+          "viirs_count": 211811.0,
+          "harmonized_fire_index": 29.5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1334 @@
+{
+  "Montane & Hills": {
+    "class_id": 1,
+    "optimal_chromosome": {
+      "w_frp_scaling": 1.2234,
+      "power_exponent": 0.9923,
+      "w_brightness": 0.00169,
+      "cluster_scale": 2.715,
+      "optimal_clustering_radius_km": 1.2
+    },
+    "best_fitness_score": 75.1523,
+    "objectives": {
+      "weights": {
+        "energy_calibration": 0.6,
+        "count_parity": 0.4
+      },
+      "viirs_to_modis_event_count_ratio": 3.4121,
+      "consolidated_events_at_optimum": 760,
+      "mean_pixels_per_event": 3.76
+    },
+    "validation": {
+      "ground_truth": "fires detected by BOTH satellites on the same day",
+      "split": "held-out 30%",
+      "train": {
+        "n_pairs": 82,
+        "distribution": {
+          "distribution_fit_pct": 95.32,
+          "mean_abs_log_quantile_error": 0.0479,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            11.4,
+            20.88,
+            51.07,
+            142.22,
+            478.87
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            11.4,
+            19.36,
+            51.23,
+            155.7,
+            446.23
+          ],
+          "median_ratio_before": 1.3413,
+          "median_ratio_after": 0.9969
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.6022,
+          "median_rel_error_pct": 66.17,
+          "mean_rel_error_pct": 201.94,
+          "mae_mw": 170.51,
+          "rmse_mw": 456.9,
+          "r2": 0.3046
+        }
+      },
+      "holdout": {
+        "n_pairs": 36,
+        "distribution": {
+          "distribution_fit_pct": 82.8,
+          "mean_abs_log_quantile_error": 0.1888,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            9.09,
+            13.02,
+            33.08,
+            85.91,
+            393.07
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            6.24,
+            11.9,
+            36.15,
+            97.17,
+            301.22
+          ],
+          "median_ratio_before": 1.5727,
+          "median_ratio_after": 0.9149
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.78,
+          "median_rel_error_pct": 40.67,
+          "mean_rel_error_pct": 84.9,
+          "mae_mw": 64.29,
+          "rmse_mw": 116.41,
+          "r2": 0.6939
+        }
+      }
+    },
+    "radius_sweep": [
+      {
+        "radius_km": 0.6,
+        "events": 1073,
+        "paired_fires": 154,
+        "viirs_to_modis_event_ratio": 2.5982,
+        "mean_pixels_per_event": 2.67
+      },
+      {
+        "radius_km": 0.7,
+        "events": 940,
+        "paired_fires": 140,
+        "viirs_to_modis_event_ratio": 2.4951,
+        "mean_pixels_per_event": 3.04
+      },
+      {
+        "radius_km": 0.8,
+        "events": 898,
+        "paired_fires": 144,
+        "viirs_to_modis_event_ratio": 2.6181,
+        "mean_pixels_per_event": 3.19
+      },
+      {
+        "radius_km": 0.9,
+        "events": 846,
+        "paired_fires": 129,
+        "viirs_to_modis_event_ratio": 2.7645,
+        "mean_pixels_per_event": 3.38
+      },
+      {
+        "radius_km": 1.0,
+        "events": 802,
+        "paired_fires": 123,
+        "viirs_to_modis_event_ratio": 3.057,
+        "mean_pixels_per_event": 3.57
+      },
+      {
+        "radius_km": 1.1,
+        "events": 777,
+        "paired_fires": 123,
+        "viirs_to_modis_event_ratio": 3.2857,
+        "mean_pixels_per_event": 3.68
+      },
+      {
+        "radius_km": 1.2,
+        "events": 760,
+        "paired_fires": 118,
+        "viirs_to_modis_event_ratio": 3.4121,
+        "mean_pixels_per_event": 3.76
+      },
+      {
+        "radius_km": 1.3,
+        "events": 743,
+        "paired_fires": 121,
+        "viirs_to_modis_event_ratio": 3.4767,
+        "mean_pixels_per_event": 3.85
+      },
+      {
+        "radius_km": 1.4,
+        "events": 737,
+        "paired_fires": 120,
+        "viirs_to_modis_event_ratio": 3.5105,
+        "mean_pixels_per_event": 3.88
+      },
+      {
+        "radius_km": 1.5,
+        "events": 720,
+        "paired_fires": 117,
+        "viirs_to_modis_event_ratio": 3.6243,
+        "mean_pixels_per_event": 3.97
+      },
+      {
+        "radius_km": 1.6,
+        "events": 721,
+        "paired_fires": 118,
+        "viirs_to_modis_event_ratio": 3.6611,
+        "mean_pixels_per_event": 3.97
+      }
+    ],
+    "convergence_history": [
+      {
+        "generation": 1,
+        "best_fitness": 69.0371,
+        "avg_fitness": 45.914
+      },
+      {
+        "generation": 2,
+        "best_fitness": 72.0657,
+        "avg_fitness": 57.2915
+      },
+      {
+        "generation": 3,
+        "best_fitness": 72.0863,
+        "avg_fitness": 62.7237
+      },
+      {
+        "generation": 4,
+        "best_fitness": 73.6394,
+        "avg_fitness": 64.793
+      },
+      {
+        "generation": 5,
+        "best_fitness": 74.8255,
+        "avg_fitness": 66.8552
+      },
+      {
+        "generation": 6,
+        "best_fitness": 74.8255,
+        "avg_fitness": 65.8201
+      },
+      {
+        "generation": 7,
+        "best_fitness": 74.8255,
+        "avg_fitness": 66.3329
+      },
+      {
+        "generation": 8,
+        "best_fitness": 74.8255,
+        "avg_fitness": 69.1475
+      },
+      {
+        "generation": 9,
+        "best_fitness": 74.8255,
+        "avg_fitness": 67.7471
+      },
+      {
+        "generation": 10,
+        "best_fitness": 75.0549,
+        "avg_fitness": 68.9112
+      },
+      {
+        "generation": 11,
+        "best_fitness": 75.0549,
+        "avg_fitness": 70.9232
+      },
+      {
+        "generation": 12,
+        "best_fitness": 75.0585,
+        "avg_fitness": 71.1356
+      },
+      {
+        "generation": 13,
+        "best_fitness": 75.0701,
+        "avg_fitness": 71.0089
+      },
+      {
+        "generation": 14,
+        "best_fitness": 75.1419,
+        "avg_fitness": 69.6695
+      },
+      {
+        "generation": 15,
+        "best_fitness": 75.1446,
+        "avg_fitness": 71.8406
+      },
+      {
+        "generation": 16,
+        "best_fitness": 75.1446,
+        "avg_fitness": 71.1083
+      },
+      {
+        "generation": 17,
+        "best_fitness": 75.1446,
+        "avg_fitness": 71.9926
+      },
+      {
+        "generation": 18,
+        "best_fitness": 75.1522,
+        "avg_fitness": 72.4179
+      },
+      {
+        "generation": 19,
+        "best_fitness": 75.1522,
+        "avg_fitness": 72.0969
+      },
+      {
+        "generation": 20,
+        "best_fitness": 75.1522,
+        "avg_fitness": 69.798
+      },
+      {
+        "generation": 21,
+        "best_fitness": 75.1522,
+        "avg_fitness": 69.3786
+      },
+      {
+        "generation": 22,
+        "best_fitness": 75.1522,
+        "avg_fitness": 69.5012
+      },
+      {
+        "generation": 23,
+        "best_fitness": 75.1522,
+        "avg_fitness": 70.7128
+      },
+      {
+        "generation": 24,
+        "best_fitness": 75.1522,
+        "avg_fitness": 69.3456
+      },
+      {
+        "generation": 25,
+        "best_fitness": 75.1522,
+        "avg_fitness": 70.1668
+      },
+      {
+        "generation": 26,
+        "best_fitness": 75.1522,
+        "avg_fitness": 70.6858
+      },
+      {
+        "generation": 27,
+        "best_fitness": 75.1522,
+        "avg_fitness": 71.9425
+      },
+      {
+        "generation": 28,
+        "best_fitness": 75.1522,
+        "avg_fitness": 72.3399
+      },
+      {
+        "generation": 29,
+        "best_fitness": 75.1523,
+        "avg_fitness": 70.2721
+      },
+      {
+        "generation": 30,
+        "best_fitness": 75.1523,
+        "avg_fitness": 72.5865
+      }
+    ]
+  },
+  "Dense Rainforest": {
+    "class_id": 2,
+    "optimal_chromosome": {
+      "w_frp_scaling": 0.6736,
+      "power_exponent": 0.887,
+      "w_brightness": 0.02605,
+      "cluster_scale": 2.446,
+      "optimal_clustering_radius_km": 0.8
+    },
+    "best_fitness_score": 80.5413,
+    "objectives": {
+      "weights": {
+        "energy_calibration": 0.6,
+        "count_parity": 0.4
+      },
+      "viirs_to_modis_event_count_ratio": 2.1344,
+      "consolidated_events_at_optimum": 31355,
+      "mean_pixels_per_event": 2.42
+    },
+    "validation": {
+      "ground_truth": "fires detected by BOTH satellites on the same day",
+      "split": "held-out 30%",
+      "train": {
+        "n_pairs": 2561,
+        "distribution": {
+          "distribution_fit_pct": 96.32,
+          "mean_abs_log_quantile_error": 0.0375,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            7.64,
+            11.47,
+            21.1,
+            47.94,
+            105.67
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            7.25,
+            11.47,
+            22.4,
+            48.69,
+            99.55
+          ],
+          "median_ratio_before": 1.157,
+          "median_ratio_after": 0.9422
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.498,
+          "median_rel_error_pct": 56.78,
+          "mean_rel_error_pct": 112.95,
+          "mae_mw": 40.65,
+          "rmse_mw": 125.85,
+          "r2": 0.1754
+        }
+      },
+      "holdout": {
+        "n_pairs": 1098,
+        "distribution": {
+          "distribution_fit_pct": 92.25,
+          "mean_abs_log_quantile_error": 0.0807,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            7.57,
+            11.49,
+            23.89,
+            51.7,
+            104.74
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            6.83,
+            10.49,
+            23.24,
+            48.94,
+            92.24
+          ],
+          "median_ratio_before": 1.178,
+          "median_ratio_after": 1.028
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.4858,
+          "median_rel_error_pct": 60.6,
+          "mean_rel_error_pct": 108.85,
+          "mae_mw": 41.44,
+          "rmse_mw": 95.43,
+          "r2": 0.0369
+        }
+      }
+    },
+    "radius_sweep": [
+      {
+        "radius_km": 0.6,
+        "events": 36688,
+        "paired_fires": 3539,
+        "viirs_to_modis_event_ratio": 2.2657,
+        "mean_pixels_per_event": 2.07
+      },
+      {
+        "radius_km": 0.7,
+        "events": 33354,
+        "paired_fires": 3613,
+        "viirs_to_modis_event_ratio": 2.1531,
+        "mean_pixels_per_event": 2.28
+      },
+      {
+        "radius_km": 0.8,
+        "events": 31355,
+        "paired_fires": 3659,
+        "viirs_to_modis_event_ratio": 2.1344,
+        "mean_pixels_per_event": 2.42
+      },
+      {
+        "radius_km": 0.9,
+        "events": 29799,
+        "paired_fires": 3676,
+        "viirs_to_modis_event_ratio": 2.15,
+        "mean_pixels_per_event": 2.55
+      },
+      {
+        "radius_km": 1.0,
+        "events": 28171,
+        "paired_fires": 3662,
+        "viirs_to_modis_event_ratio": 2.296,
+        "mean_pixels_per_event": 2.7
+      },
+      {
+        "radius_km": 1.1,
+        "events": 26627,
+        "paired_fires": 3651,
+        "viirs_to_modis_event_ratio": 2.5142,
+        "mean_pixels_per_event": 2.85
+      },
+      {
+        "radius_km": 1.2,
+        "events": 25721,
+        "paired_fires": 3662,
+        "viirs_to_modis_event_ratio": 2.6217,
+        "mean_pixels_per_event": 2.95
+      },
+      {
+        "radius_km": 1.3,
+        "events": 25011,
+        "paired_fires": 3682,
+        "viirs_to_modis_event_ratio": 2.6626,
+        "mean_pixels_per_event": 3.04
+      },
+      {
+        "radius_km": 1.4,
+        "events": 24494,
+        "paired_fires": 3658,
+        "viirs_to_modis_event_ratio": 2.712,
+        "mean_pixels_per_event": 3.1
+      },
+      {
+        "radius_km": 1.5,
+        "events": 23940,
+        "paired_fires": 3652,
+        "viirs_to_modis_event_ratio": 2.753,
+        "mean_pixels_per_event": 3.17
+      },
+      {
+        "radius_km": 1.6,
+        "events": 23585,
+        "paired_fires": 3675,
+        "viirs_to_modis_event_ratio": 2.7662,
+        "mean_pixels_per_event": 3.22
+      }
+    ],
+    "convergence_history": [
+      {
+        "generation": 1,
+        "best_fitness": 74.9207,
+        "avg_fitness": 44.6543
+      },
+      {
+        "generation": 2,
+        "best_fitness": 78.9581,
+        "avg_fitness": 59.9923
+      },
+      {
+        "generation": 3,
+        "best_fitness": 79.1732,
+        "avg_fitness": 69.9846
+      },
+      {
+        "generation": 4,
+        "best_fitness": 79.8056,
+        "avg_fitness": 74.0425
+      },
+      {
+        "generation": 5,
+        "best_fitness": 79.9344,
+        "avg_fitness": 73.6365
+      },
+      {
+        "generation": 6,
+        "best_fitness": 79.9344,
+        "avg_fitness": 76.2181
+      },
+      {
+        "generation": 7,
+        "best_fitness": 79.9704,
+        "avg_fitness": 75.2586
+      },
+      {
+        "generation": 8,
+        "best_fitness": 80.0044,
+        "avg_fitness": 77.4651
+      },
+      {
+        "generation": 9,
+        "best_fitness": 80.0579,
+        "avg_fitness": 75.1078
+      },
+      {
+        "generation": 10,
+        "best_fitness": 80.0979,
+        "avg_fitness": 75.9895
+      },
+      {
+        "generation": 11,
+        "best_fitness": 80.0979,
+        "avg_fitness": 76.8259
+      },
+      {
+        "generation": 12,
+        "best_fitness": 80.273,
+        "avg_fitness": 75.6292
+      },
+      {
+        "generation": 13,
+        "best_fitness": 80.273,
+        "avg_fitness": 77.517
+      },
+      {
+        "generation": 14,
+        "best_fitness": 80.273,
+        "avg_fitness": 77.3146
+      },
+      {
+        "generation": 15,
+        "best_fitness": 80.273,
+        "avg_fitness": 75.8499
+      },
+      {
+        "generation": 16,
+        "best_fitness": 80.4551,
+        "avg_fitness": 78.0454
+      },
+      {
+        "generation": 17,
+        "best_fitness": 80.4551,
+        "avg_fitness": 75.9174
+      },
+      {
+        "generation": 18,
+        "best_fitness": 80.479,
+        "avg_fitness": 75.6453
+      },
+      {
+        "generation": 19,
+        "best_fitness": 80.4846,
+        "avg_fitness": 76.2163
+      },
+      {
+        "generation": 20,
+        "best_fitness": 80.5079,
+        "avg_fitness": 77.7889
+      },
+      {
+        "generation": 21,
+        "best_fitness": 80.5348,
+        "avg_fitness": 77.1309
+      },
+      {
+        "generation": 22,
+        "best_fitness": 80.5362,
+        "avg_fitness": 77.5696
+      },
+      {
+        "generation": 23,
+        "best_fitness": 80.5362,
+        "avg_fitness": 77.3584
+      },
+      {
+        "generation": 24,
+        "best_fitness": 80.5384,
+        "avg_fitness": 77.4421
+      },
+      {
+        "generation": 25,
+        "best_fitness": 80.5403,
+        "avg_fitness": 74.1163
+      },
+      {
+        "generation": 26,
+        "best_fitness": 80.5403,
+        "avg_fitness": 74.9876
+      },
+      {
+        "generation": 27,
+        "best_fitness": 80.5403,
+        "avg_fitness": 76.6748
+      },
+      {
+        "generation": 28,
+        "best_fitness": 80.5405,
+        "avg_fitness": 77.05
+      },
+      {
+        "generation": 29,
+        "best_fitness": 80.5413,
+        "avg_fitness": 77.2958
+      },
+      {
+        "generation": 30,
+        "best_fitness": 80.5413,
+        "avg_fitness": 76.7904
+      }
+    ]
+  },
+  "Agricultural Plains": {
+    "class_id": 3,
+    "optimal_chromosome": {
+      "w_frp_scaling": 0.2,
+      "power_exponent": 0.8008,
+      "w_brightness": 0.01845,
+      "cluster_scale": 2.9151,
+      "optimal_clustering_radius_km": 1.5
+    },
+    "best_fitness_score": 68.7107,
+    "objectives": {
+      "weights": {
+        "energy_calibration": 0.6,
+        "count_parity": 0.4
+      },
+      "viirs_to_modis_event_count_ratio": 5.2787,
+      "consolidated_events_at_optimum": 366,
+      "mean_pixels_per_event": 1.92
+    },
+    "validation": {
+      "ground_truth": "fires detected by BOTH satellites on the same day",
+      "split": "in-sample (too few paired fires for a holdout)",
+      "train": {
+        "n_pairs": 17,
+        "distribution": {
+          "distribution_fit_pct": 89.49,
+          "mean_abs_log_quantile_error": 0.111,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            4.53,
+            5.06,
+            6.33,
+            12.83,
+            19.1
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            3.73,
+            6.22,
+            6.99,
+            12.12,
+            19.1
+          ],
+          "median_ratio_before": 0.9389,
+          "median_ratio_after": 0.906
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.3282,
+          "median_rel_error_pct": 63.35,
+          "mean_rel_error_pct": 92.37,
+          "mae_mw": 8.73,
+          "rmse_mw": 12.96,
+          "r2": -0.9738
+        }
+      },
+      "holdout": {
+        "n_pairs": 17,
+        "distribution": {
+          "distribution_fit_pct": 89.49,
+          "mean_abs_log_quantile_error": 0.111,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            4.53,
+            5.06,
+            6.33,
+            12.83,
+            19.1
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            3.73,
+            6.22,
+            6.99,
+            12.12,
+            19.1
+          ],
+          "median_ratio_before": 0.9389,
+          "median_ratio_after": 0.906
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.3282,
+          "median_rel_error_pct": 63.35,
+          "mean_rel_error_pct": 92.37,
+          "mae_mw": 8.73,
+          "rmse_mw": 12.96,
+          "r2": -0.9738
+        }
+      }
+    },
+    "radius_sweep": [
+      {
+        "radius_km": 0.6,
+        "events": 446,
+        "paired_fires": 16,
+        "viirs_to_modis_event_ratio": 5.6,
+        "mean_pixels_per_event": 1.57
+      },
+      {
+        "radius_km": 0.7,
+        "events": 421,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.6364,
+        "mean_pixels_per_event": 1.67
+      },
+      {
+        "radius_km": 0.8,
+        "events": 408,
+        "paired_fires": 18,
+        "viirs_to_modis_event_ratio": 5.5538,
+        "mean_pixels_per_event": 1.72
+      },
+      {
+        "radius_km": 0.9,
+        "events": 407,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.625,
+        "mean_pixels_per_event": 1.72
+      },
+      {
+        "radius_km": 1.0,
+        "events": 396,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.7705,
+        "mean_pixels_per_event": 1.77
+      },
+      {
+        "radius_km": 1.1,
+        "events": 388,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.6393,
+        "mean_pixels_per_event": 1.81
+      },
+      {
+        "radius_km": 1.2,
+        "events": 389,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.6557,
+        "mean_pixels_per_event": 1.8
+      },
+      {
+        "radius_km": 1.3,
+        "events": 378,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.4754,
+        "mean_pixels_per_event": 1.85
+      },
+      {
+        "radius_km": 1.4,
+        "events": 373,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.3934,
+        "mean_pixels_per_event": 1.88
+      },
+      {
+        "radius_km": 1.5,
+        "events": 366,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.2787,
+        "mean_pixels_per_event": 1.92
+      },
+      {
+        "radius_km": 1.6,
+        "events": 365,
+        "paired_fires": 17,
+        "viirs_to_modis_event_ratio": 5.2623,
+        "mean_pixels_per_event": 1.92
+      }
+    ],
+    "convergence_history": [
+      {
+        "generation": 1,
+        "best_fitness": 66.3754,
+        "avg_fitness": 27.6536
+      },
+      {
+        "generation": 2,
+        "best_fitness": 66.3754,
+        "avg_fitness": 34.7178
+      },
+      {
+        "generation": 3,
+        "best_fitness": 66.3754,
+        "avg_fitness": 45.3814
+      },
+      {
+        "generation": 4,
+        "best_fitness": 66.3754,
+        "avg_fitness": 54.9263
+      },
+      {
+        "generation": 5,
+        "best_fitness": 67.3688,
+        "avg_fitness": 60.6104
+      },
+      {
+        "generation": 6,
+        "best_fitness": 67.3688,
+        "avg_fitness": 62.2781
+      },
+      {
+        "generation": 7,
+        "best_fitness": 67.3688,
+        "avg_fitness": 64.6242
+      },
+      {
+        "generation": 8,
+        "best_fitness": 67.6343,
+        "avg_fitness": 64.3549
+      },
+      {
+        "generation": 9,
+        "best_fitness": 67.6343,
+        "avg_fitness": 64.7951
+      },
+      {
+        "generation": 10,
+        "best_fitness": 68.2064,
+        "avg_fitness": 65.6989
+      },
+      {
+        "generation": 11,
+        "best_fitness": 68.2588,
+        "avg_fitness": 64.6152
+      },
+      {
+        "generation": 12,
+        "best_fitness": 68.3478,
+        "avg_fitness": 63.349
+      },
+      {
+        "generation": 13,
+        "best_fitness": 68.4254,
+        "avg_fitness": 65.4571
+      },
+      {
+        "generation": 14,
+        "best_fitness": 68.4254,
+        "avg_fitness": 65.9892
+      },
+      {
+        "generation": 15,
+        "best_fitness": 68.6551,
+        "avg_fitness": 65.4471
+      },
+      {
+        "generation": 16,
+        "best_fitness": 68.6551,
+        "avg_fitness": 66.1581
+      },
+      {
+        "generation": 17,
+        "best_fitness": 68.6551,
+        "avg_fitness": 65.176
+      },
+      {
+        "generation": 18,
+        "best_fitness": 68.6551,
+        "avg_fitness": 66.1508
+      },
+      {
+        "generation": 19,
+        "best_fitness": 68.6551,
+        "avg_fitness": 64.3344
+      },
+      {
+        "generation": 20,
+        "best_fitness": 68.6706,
+        "avg_fitness": 66.1774
+      },
+      {
+        "generation": 21,
+        "best_fitness": 68.6726,
+        "avg_fitness": 65.7229
+      },
+      {
+        "generation": 22,
+        "best_fitness": 68.6775,
+        "avg_fitness": 64.8438
+      },
+      {
+        "generation": 23,
+        "best_fitness": 68.6827,
+        "avg_fitness": 61.8151
+      },
+      {
+        "generation": 24,
+        "best_fitness": 68.705,
+        "avg_fitness": 67.0236
+      },
+      {
+        "generation": 25,
+        "best_fitness": 68.7107,
+        "avg_fitness": 64.7124
+      },
+      {
+        "generation": 26,
+        "best_fitness": 68.7107,
+        "avg_fitness": 64.8885
+      },
+      {
+        "generation": 27,
+        "best_fitness": 68.7107,
+        "avg_fitness": 64.6474
+      },
+      {
+        "generation": 28,
+        "best_fitness": 68.7107,
+        "avg_fitness": 66.1391
+      },
+      {
+        "generation": 29,
+        "best_fitness": 68.7107,
+        "avg_fitness": 64.4097
+      },
+      {
+        "generation": 30,
+        "best_fitness": 68.7107,
+        "avg_fitness": 66.7891
+      }
+    ]
+  },
+  "Savannas & Grasslands": {
+    "class_id": 4,
+    "optimal_chromosome": {
+      "w_frp_scaling": 0.7928,
+      "power_exponent": 1.017,
+      "w_brightness": 0.03866,
+      "cluster_scale": 3.0,
+      "optimal_clustering_radius_km": 1.5
+    },
+    "best_fitness_score": 88.5414,
+    "objectives": {
+      "weights": {
+        "energy_calibration": 0.6,
+        "count_parity": 0.4
+      },
+      "viirs_to_modis_event_count_ratio": 0.7525,
+      "consolidated_events_at_optimum": 2388,
+      "mean_pixels_per_event": 1.55
+    },
+    "validation": {
+      "ground_truth": "fires detected by BOTH satellites on the same day",
+      "split": "held-out 30%",
+      "train": {
+        "n_pairs": 67,
+        "distribution": {
+          "distribution_fit_pct": 95.66,
+          "mean_abs_log_quantile_error": 0.0443,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            8.12,
+            10.83,
+            17.86,
+            34.61,
+            62.84
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            8.49,
+            10.0,
+            17.86,
+            33.06,
+            66.14
+          ],
+          "median_ratio_before": 1.5702,
+          "median_ratio_after": 1.0003
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.2083,
+          "median_rel_error_pct": 69.81,
+          "mean_rel_error_pct": 187.92,
+          "mae_mw": 42.02,
+          "rmse_mw": 134.75,
+          "r2": -7.715
+        }
+      },
+      "holdout": {
+        "n_pairs": 30,
+        "distribution": {
+          "distribution_fit_pct": 73.85,
+          "mean_abs_log_quantile_error": 0.3032,
+          "quantiles": [
+            0.1,
+            0.25,
+            0.5,
+            0.75,
+            0.9
+          ],
+          "modis_quantiles_mw": [
+            7.31,
+            10.68,
+            17.94,
+            26.23,
+            80.25
+          ],
+          "harmonized_viirs_quantiles_mw": [
+            8.43,
+            12.3,
+            29.77,
+            52.8,
+            78.29
+          ],
+          "median_ratio_before": 1.2521,
+          "median_ratio_after": 0.6025
+        },
+        "per_fire_skill": {
+          "note": "Per-fire FRP is only weakly predictable between these sensors; reported for transparency, not optimised for.",
+          "pearson_r_log10": 0.1874,
+          "median_rel_error_pct": 67.49,
+          "mean_rel_error_pct": 199.0,
+          "mae_mw": 33.45,
+          "rmse_mw": 61.78,
+          "r2": -3.3074
+        }
+      }
+    },
+    "radius_sweep": [
+      {
+        "radius_km": 0.6,
+        "events": 3026,
+        "paired_fires": 54,
+        "viirs_to_modis_event_ratio": 0.6435,
+        "mean_pixels_per_event": 1.22
+      },
+      {
+        "radius_km": 0.7,
+        "events": 2948,
+        "paired_fires": 64,
+        "viirs_to_modis_event_ratio": 0.6334,
+        "mean_pixels_per_event": 1.26
+      },
+      {
+        "radius_km": 0.8,
+        "events": 2856,
+        "paired_fires": 72,
+        "viirs_to_modis_event_ratio": 0.6267,
+        "mean_pixels_per_event": 1.3
+      },
+      {
+        "radius_km": 0.9,
+        "events": 2807,
+        "paired_fires": 75,
+        "viirs_to_modis_event_ratio": 0.6292,
+        "mean_pixels_per_event": 1.32
+      },
+      {
+        "radius_km": 1.0,
+        "events": 2712,
+        "paired_fires": 84,
+        "viirs_to_modis_event_ratio": 0.6496,
+        "mean_pixels_per_event": 1.37
+      },
+      {
+        "radius_km": 1.1,
+        "events": 2562,
+        "paired_fires": 87,
+        "viirs_to_modis_event_ratio": 0.7013,
+        "mean_pixels_per_event": 1.45
+      },
+      {
+        "radius_km": 1.2,
+        "events": 2492,
+        "paired_fires": 88,
+        "viirs_to_modis_event_ratio": 0.7269,
+        "mean_pixels_per_event": 1.49
+      },
+      {
+        "radius_km": 1.3,
+        "events": 2455,
+        "paired_fires": 92,
+        "viirs_to_modis_event_ratio": 0.7374,
+        "mean_pixels_per_event": 1.51
+      },
+      {
+        "radius_km": 1.4,
+        "events": 2411,
+        "paired_fires": 94,
+        "viirs_to_modis_event_ratio": 0.7505,
+        "mean_pixels_per_event": 1.54
+      },
+      {
+        "radius_km": 1.5,
+        "events": 2388,
+        "paired_fires": 97,
+        "viirs_to_modis_event_ratio": 0.7525,
+        "mean_pixels_per_event": 1.55
+      },
+      {
+        "radius_km": 1.6,
+        "events": 2339,
+        "paired_fires": 102,
+        "viirs_to_modis_event_ratio": 0.7612,
+        "mean_pixels_per_event": 1.58
+      }
+    ],
+    "convergence_history": [
+      {
+        "generation": 1,
+        "best_fitness": 81.2976,
+        "avg_fitness": 52.2919
+      },
+      {
+        "generation": 2,
+        "best_fitness": 82.5055,
+        "avg_fitness": 61.4111
+      },
+      {
+        "generation": 3,
+        "best_fitness": 84.4697,
+        "avg_fitness": 73.7531
+      },
+      {
+        "generation": 4,
+        "best_fitness": 84.563,
+        "avg_fitness": 77.39
+      },
+      {
+        "generation": 5,
+        "best_fitness": 85.1365,
+        "avg_fitness": 78.9369
+      },
+      {
+        "generation": 6,
+        "best_fitness": 85.1365,
+        "avg_fitness": 80.1613
+      },
+      {
+        "generation": 7,
+        "best_fitness": 87.5078,
+        "avg_fitness": 83.0644
+      },
+      {
+        "generation": 8,
+        "best_fitness": 87.7381,
+        "avg_fitness": 83.4235
+      },
+      {
+        "generation": 9,
+        "best_fitness": 88.2724,
+        "avg_fitness": 84.8357
+      },
+      {
+        "generation": 10,
+        "best_fitness": 88.2825,
+        "avg_fitness": 84.996
+      },
+      {
+        "generation": 11,
+        "best_fitness": 88.4206,
+        "avg_fitness": 84.371
+      },
+      {
+        "generation": 12,
+        "best_fitness": 88.5205,
+        "avg_fitness": 84.32
+      },
+      {
+        "generation": 13,
+        "best_fitness": 88.5205,
+        "avg_fitness": 84.7612
+      },
+      {
+        "generation": 14,
+        "best_fitness": 88.5206,
+        "avg_fitness": 84.3424
+      },
+      {
+        "generation": 15,
+        "best_fitness": 88.5294,
+        "avg_fitness": 85.7753
+      },
+      {
+        "generation": 16,
+        "best_fitness": 88.5294,
+        "avg_fitness": 85.5079
+      },
+      {
+        "generation": 17,
+        "best_fitness": 88.5294,
+        "avg_fitness": 85.8585
+      },
+      {
+        "generation": 18,
+        "best_fitness": 88.5296,
+        "avg_fitness": 84.8724
+      },
+      {
+        "generation": 19,
+        "best_fitness": 88.5296,
+        "avg_fitness": 85.9007
+      },
+      {
+        "generation": 20,
+        "best_fitness": 88.5323,
+        "avg_fitness": 84.9168
+      },
+      {
+        "generation": 21,
+        "best_fitness": 88.5342,
+        "avg_fitness": 85.1988
+      },
+      {
+        "generation": 22,
+        "best_fitness": 88.5342,
+        "avg_fitness": 85.5105
+      },
+      {
+        "generation": 23,
+        "best_fitness": 88.5342,
+        "avg_fitness": 84.5221
+      },
+      {
+        "generation": 24,
+        "best_fitness": 88.5342,
+        "avg_fitness": 85.5752
+      },
+      {
+        "generation": 25,
+        "best_fitness": 88.5342,
+        "avg_fitness": 84.6318
+      },
+      {
+        "generation": 26,
+        "best_fitness": 88.5414,
+        "avg_fitness": 85.5118
+      },
+      {
+        "generation": 27,
+        "best_fitness": 88.5414,
+        "avg_fitness": 85.1993
+      },
+      {
+        "generation": 28,
+        "best_fitness": 88.5414,
+        "avg_fitness": 86.565
+      },
+      {
+        "generation": 29,
+        "best_fitness": 88.5414,
+        "avg_fitness": 86.0538
+      },
+      {
+        "generation": 30,
+        "best_fitness": 88.5414,
+        "avg_fitness": 85.9285
+      }
+    ]
+  }
+}

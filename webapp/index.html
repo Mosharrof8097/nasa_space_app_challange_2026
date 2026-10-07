@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmberSync — Harmonizing MODIS and VIIRS Hot Spots</title>
+<meta name="description" content="EmberSync by Team ASL NOVA: a three-stage engine that harmonizes MODIS and VIIRS wildfire hot-spot records into one continuous timeline.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="eyebrow">NASA Space Apps Challenge 2026 &middot; Harmonization of MODIS and VIIRS Hot Spots</span>
+      <span class="team-pill">Team ASL NOVA &middot; Mymensingh Engineering College</span>
+    </div>
+    <h1 class="wordmark"><span class="w-ember">Ember</span><span class="w-sync">Sync</span></h1>
+    <p class="tagline">One record, one truth, one step ahead of the flames.</p>
+    <p class="lede">Two satellites watch Earth burn, but they count fire differently. EmberSync merges their records into a single, trustworthy timeline.</p>
+    <div class="scope" role="note" aria-label="Data scope">
+      <span class="scope-tag">Data scope</span>
+      <p id="scope-text">Validated on a <span id="scope-days">—</span>-day global benchmark (<span id="scope-n">—</span> NASA FIRMS detections). Multi-year archive ingestion in progress.</p>
+      <p class="scope-win" id="scope-win"></p>
+      <p class="scope-warn" id="scope-warn" hidden></p>
+    </div>
+    <div id="load-error" class="load-error" role="alert" hidden></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap sec" aria-labelledby="h-kpi">
+    <h2 id="h-kpi" class="sr-only">Key numbers</h2>
+    <div class="kpis" id="kpis"></div>
+    <div class="sensor-split" id="sensor-split"></div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="h-timeline">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <div>
+        <h2 id="h-timeline">The broken timeline, repaired</h2>
+        <p class="sec-sub">Sharper VIIRS pixels split one physical fire into several detections. In raw FIRMS counts that looks like fire activity jumping overnight in 2012. It didn't. Nothing burned more.</p>
+      </div>
+    </div>
+    <div class="card exhibit" id="exhibit">
+      <div class="exhibit-controls">
+        <fieldset class="seg" id="mode-seg">
+          <legend class="sr-only">Timeline view</legend>
+          <input type="radio" name="mode" id="mode-raw" value="0" checked>
+          <label for="mode-raw"><i class="dot dot-raw" aria-hidden="true"></i>Raw FIRMS counts</label>
+          <input type="radio" name="mode" id="mode-harm" value="1">
+          <label for="mode-harm"><i class="dot dot-harm" aria-hidden="true"></i>EmberSync harmonized</label>
+          <span class="seg-thumb" aria-hidden="true"></span>
+        </fieldset>
+        <div class="scrub">
+          <label for="scrub" class="scrub-l">Scrub</label>
+          <input type="range" id="scrub" min="0" max="100" value="0" step="1" aria-label="Blend between raw and harmonized timeline">
+        </div>
+        <div class="readout" aria-live="polite">
+          <span class="readout-k">2011 &rarr; 2012 change</span>
+          <span class="readout-v" id="jump-v">—</span>
+        </div>
+      </div>
+      <div class="chart-box tall"><canvas id="timeline-chart" role="img" aria-label="Line chart of yearly fire activity, 2000 to 2026, switchable between raw and harmonized series"></canvas></div>
+      <p class="caption modeled" id="timeline-caption"><span class="chip chip-warn">Modeled baseline projection</span> <span id="timeline-caption-text">Illustrative &mdash; pending full archive ingestion. This long timeline is a model-based projection, not measured historical data.</span></p>
+      <p class="caption small" id="timeline-note">Each series is indexed to its own 2000&ndash;2011 average (= 100) so the two can share one axis.</p>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="h-map">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <div>
+        <h2 id="h-map">Where the fires are</h2>
+        <p class="sec-sub">Every dot is a consolidated fire detection from the benchmark window. Switch the sizing to see how harmonized energy (FRP) differs from the raw reading.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="map-controls">
+        <fieldset class="biome-filter" id="map-biomes"><legend class="ctl-l">Biomes</legend></fieldset>
+        <fieldset class="mini-seg" id="map-size">
+          <legend class="ctl-l">Marker size = </legend>
+          <label><input type="radio" name="size" value="frp" checked><span>Raw FRP</span></label>
+          <label><input type="radio" name="size" value="harmonized_frp"><span>Harmonized FRP</span></label>
+        </fieldset>
+      </div>
+      <div id="map" class="map" role="region" aria-label="Interactive map of fire detections"></div>
+      <p class="caption small" id="map-status" aria-live="polite"></p>
+      <p class="caption small">FRP = Fire Radiative Power, the heat energy a fire gives off (megawatts). A white ring marks a fire confirmed by both satellites. Click any dot for details.</p>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="h-cal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <div>
+        <h2 id="h-cal">Burning Activity Calendar</h2>
+        <p class="sec-sub">One cell per day. Brighter means more fire events. A Z-score engine flags days that run well above a biome's baseline.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="cal-controls">
+        <div class="tabs" id="cal-tabs" role="group" aria-label="Filter calendar by biome"></div>
+        <ul class="cal-legend" id="cal-legend" aria-label="Calendar legend"></ul>
+      </div>
+      <div id="cal" class="cal"></div>
+      <p class="caption small" id="cal-note"></p>
+    </div>
+    <div id="cal-tip" class="tip" role="tooltip" hidden></div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="h-table">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <div>
+        <h2 id="h-table">Per-biome harmonization</h2>
+        <p class="sec-sub">Fire physics differs by terrain, so the genetic algorithm tunes each biome separately and is validated on fires both satellites saw on the same day.</p>
+      </div>
+    </div>
+    <div class="card flush">
+      <table class="biome-table" id="biome-table">
+        <caption class="sr-only">Harmonization parameters and fit quality for each biome</caption>
+        <thead>
+          <tr>
+            <th scope="col">Biome</th>
+            <th scope="col" class="num">Raw &rarr; events</th>
+            <th scope="col" class="num">Optimal radius</th>
+            <th scope="col" class="num">Calibration exponent</th>
+            <th scope="col" class="num">Distribution fit</th>
+            <th scope="col" class="num">Per-fire skill</th>
+            <th scope="col" class="num">Validation pairs</th>
+            <th scope="col" class="num">Cross-sensor matches</th>
+            <th scope="col" class="num">Inflation removed</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="h-ga">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <div>
+        <h2 id="h-ga">Genetic algorithm convergence</h2>
+        <p class="sec-sub">Each line is one biome's search for its best clustering radius and calibration curve. Higher fitness is better; flattening means the search has settled.</p>
+      </div>
+    </div>
+    <div class="card">
+      <label class="check"><input type="checkbox" id="ga-avg"> <span>Also show population average (dashed)</span></label>
+      <div class="chart-box"><canvas id="ga-chart" role="img" aria-label="Line chart of genetic algorithm fitness by generation for each biome"></canvas></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2 class="foot-h">Team ASL NOVA</h2>
+        <p class="foot-sub">Mymensingh Engineering College &middot; NASA Space Apps Challenge 2026</p>
+        <ul class="team" id="team">
+          <li><strong>Mosharrof Hossain</strong><span>Team Lead &amp; ML Engineer</span></li>
+          <li><strong>Sabrina Akter Saba</strong><span>Data Engineer</span></li>
+          <li><strong>Tausif Mahdi Akanda</strong><span>GIS &amp; Visualization</span></li>
+          <li><strong>Abu Shaed Khan</strong><span>Full-stack Development</span></li>
+          <li><strong>Sanjid Mahmud</strong><span>Data Science</span></li>
+          <li><strong>Bayezid Khan</strong><span>Design &amp; Storytelling</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Key references</h2>
+        <ul class="refs">
+          <li><strong>Giglio et al. (2016)</strong>, <em>Remote Sensing of Environment</em> &mdash; MODIS Collection 6 active fire product.</li>
+          <li><strong>Li et al. (2018)</strong>, <em>JGR Atmospheres</em> &mdash; VIIRS vs MODIS FRP, ~20% systemic sensor difference.</li>
+          <li><strong>Fu et al. (2020)</strong> &mdash; MODIS missed a large share of VIIRS-detected cropland fires.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note">Fire data: NASA FIRMS (MODIS and VIIRS active fire detections). Map tiles &copy; OpenStreetMap contributors. <span id="gen-at"></span></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/map.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/ga.js"></script>
+<script src="js/boot.js"></script>
+</body>
+</html>
